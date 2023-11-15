@@ -1,16 +1,4 @@
-# File: templates/include-npm-steps.yml
-
-steps:
-- script: npm install
-- script: yarn install
-- script: npm run compile
-
-- job: Windows
-  pool:
-    vmImage: 'windows-latest'
-  steps:
-  - template: templates/include-npm-steps.yml  # Template reference
-name: Build-Pipeline
+name: YAML-based Pipeline
 
 on:
   push:
